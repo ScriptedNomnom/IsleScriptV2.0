@@ -30,7 +30,7 @@ hookfunction(game:GetService("Players").LocalPlayer.Kick,protect(function() wait
 _G.WalkSpeed = 16
 _G.Items = {}
 
-local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/ScriptedNomnom/XniperLibrary/main/source.lua"))()
+local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/ScriptedNomnom/XniperLibrary/main/Source.lua"))()
 
 local main = Library:CreateWindow({
 	Title = "Galaxyhub Isle"
