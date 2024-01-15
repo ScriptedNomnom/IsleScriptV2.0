@@ -408,7 +408,7 @@ local refreshTools = mainTab:Button({
 				name = tostring(v),
 
 				callback = function()
-					game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game:GetService("Workspace").Map.Ignore.Tools[v]:FindFirstChild("Handle").CFrame
+					game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game:GetService("Workspace").Map.Ignore.Tools:WaitForChild(v):FindFirstChild("Handle").CFrame
 					keypress(0x45)
 					keyrelease(0x45)
 				end
@@ -623,7 +623,7 @@ workspace.Map.Ignore.Tools.ChildAdded:Connect(function(child)
 			name = tostring(child.Name),
 
 			callback = function()
-				game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game:GetService("Workspace").Map.Ignore.Tools[child.Name]:FindFirstChild("Handle").CFrame
+				game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game:GetService("Workspace").Map.Ignore.Tools:WaitForChild(child.Name):FindFirstChild("Handle").CFrame
 				keypress(0x45)
 				keyrelease(0x45)
 			end
@@ -633,7 +633,7 @@ end)
 workspace.Map.Ignore.Tools.ChildRemoved:Connect(function(child)
 	for _, v in pairs(_G.Items) do
 		if tostring(v) == child.Name then
-			table.remove(_G.Items,child)
+			table.remove(_G.Items, child)
 		end
 	end
 end)
