@@ -33,7 +33,7 @@ _G.Items = {}
 local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/ScriptedNomnom/XniperLibrary/main/Source.lua"))()
 
 local main = Library:CreateWindow({
-	Title = "Galaxyhub Isle"
+	Title = "XniperHub Isle"
 })
 
 local mainTab = main:CreateTab({
