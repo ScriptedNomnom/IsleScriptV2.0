@@ -363,7 +363,7 @@ local removeTrees = miscTab:Button({
 
 _G.Message = Instance.new("Color3Value")
 _G.Message.Value = Color3.fromRGB(255,255,0)
-_G.Message.Name = "Welcome To Galaxyhub Isle :)"
+_G.Message.Name = "Welcome To XniperHub Isle :)"
 _G.Message.Parent = game.Players.LocalPlayer.Character["@Alerts"]
 
 local msa = miscTab:Slider({
