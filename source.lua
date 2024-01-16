@@ -1,4 +1,4 @@
---hazelN's Scripts, ThatNoemrr--
+--hazelN's Scripts, @XniperHub--
 
 local mt = getrawmetatable(game)
 local old = mt.__namecall
@@ -27,13 +27,14 @@ mt.__namecall = protect(function(self, ...)
 end)
 hookfunction(game:GetService("Players").LocalPlayer.Kick,protect(function() wait(9e9) end))
 
+local InfStorage = false
 _G.WalkSpeed = 16
 _G.Items = {}
 
 local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/ScriptedNomnom/XniperLibrary/main/Source.lua"))()
 
 local main = Library:CreateWindow({
-	Title = "XniperHub Isle"
+	Title = "Galaxyhub Isle"
 })
 
 local mainTab = main:CreateTab({
@@ -287,38 +288,6 @@ local files = miscTab:Button({
 	end
 })
 
-local itemEsp = miscTab:Button({
-	name = "Item Esp",
-
-	callback = function()
-		if game.Players.LocalPlayer.Character:FindFirstChild("WisdomArtifact") == nil  then    
-			local BoolValue = Instance.new("BoolValue")
-			BoolValue.Value = true
-			BoolValue.Name = "WisdomArtifact"
-			BoolValue.Parent = game.Players.LocalPlayer.Character
-
-		end
-
-		game.Workspace.Threats.ChildAdded:Connect(function()
-			if game.Players.LocalPlayer.Character:FindFirstChild("WisdomArtifact") then
-				local BoolValue = Instance.new("BoolValue")
-				BoolValue.Value = true
-				BoolValue.Name = "WisdomArtifact"
-				BoolValue.Parent = game.Players.LocalPlayer.Character
-			end
-		end)
-
-		game.Players.LocalPlayer.CharacterAdded:Connect(function(character)
-			task.wait(1)
-			if game.Players.LocalPlayer.Character:FindFirstChild("WisdomArtifact") == nil  then
-				local BoolValue = Instance.new("BoolValue")
-				BoolValue.Value = true
-				BoolValue.Name = "WisdomArtifact"
-				BoolValue.Parent = game.Players.LocalPlayer.Character
-			end
-		end)
-	end
-})
 ANTITPBYPASS = false
 
 local blur = miscTab:Button({
@@ -363,7 +332,7 @@ local removeTrees = miscTab:Button({
 
 _G.Message = Instance.new("Color3Value")
 _G.Message.Value = Color3.fromRGB(255,255,0)
-_G.Message.Name = "Welcome To XniperHub Isle :)"
+_G.Message.Name = "Welcome To Galaxyhub Isle :)"
 _G.Message.Parent = game.Players.LocalPlayer.Character["@Alerts"]
 
 local msa = miscTab:Slider({
@@ -414,6 +383,292 @@ local refreshTools = mainTab:Button({
 				end
 			})
 		end
+	end
+})
+
+local tpExMenu = mainTab:Button({
+	name = "Items-Menu",
+	
+	callback = function()
+
+		local KryptonUILib = Instance.new("ScreenGui")
+		local Scrolling = Instance.new("ScrollingFrame")
+		local _73 = Instance.new("UIListLayout")
+		local _8 = Instance.new("UIPadding")
+		local a = Instance.new("Frame")
+		local Amongus = Instance.new("TextBox")
+		local _90 = Instance.new("UICorner")
+		local Frame = Instance.new("Frame")
+		local UIListLayout = Instance.new("UIListLayout")
+		local Frame_2 = Instance.new("Frame")
+		local TextButton = Instance.new("TextButton")
+		local _1 = Instance.new("UICorner")
+		local UIListLayout_2 = Instance.new("UIListLayout")
+
+		--Properties:
+
+		KryptonUILib.Name = "KryptonUILib"
+		KryptonUILib.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
+		KryptonUILib.ResetOnSpawn = false
+
+		Scrolling.Name = "Scrolling"
+		Scrolling.Parent = KryptonUILib
+		Scrolling.BackgroundColor3 = Color3.fromRGB(30, 30, 30)
+		Scrolling.BorderSizePixel = 0
+		Scrolling.Position = UDim2.new(0, 511, 0, 219)
+		Scrolling.Size = UDim2.new(0.347075045, -150, 0.520395577, -50)
+		Scrolling.BottomImage = "rbxassetid://7445543667"
+		Scrolling.CanvasSize = UDim2.new(0, 0, 0, 5000000)
+		Scrolling.MidImage = "rbxassetid://7445543667"
+		Scrolling.ScrollBarThickness = 5
+		Scrolling.TopImage = "rbxassetid://7445543667"
+
+		_73.Name = 'eafsxz'
+
+		_73.SortOrder = Enum.SortOrder.LayoutOrder
+		_73.Padding = UDim.new(0, 6)
+
+		_8.Name = "  х  8   ݅           п  й             є    ѐ"
+		_8.Parent = Scrolling
+		_8.PaddingBottom = UDim.new(0, 15)
+		_8.PaddingLeft = UDim.new(0, 10)
+		_8.PaddingRight = UDim.new(0, 10)
+		_8.PaddingTop = UDim.new(0, 15)
+
+		a.Name = "a"
+		a.Parent = Scrolling
+		a.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+		a.BackgroundTransparency = 1.000
+		a.Size = UDim2.new(1, 0, 1, 0)
+
+		Amongus.Name = "Amongus"
+		Amongus.Parent = a
+		Amongus.BackgroundColor3 = Color3.fromRGB(14, 14, 14)
+		Amongus.Position = UDim2.new(0.0195694715, 0, 0.553738356, 0)
+		Amongus.Size = UDim2.new(1, 0, 0, 30)
+		Amongus.Font = Enum.Font.SourceSans
+		Amongus.PlaceholderText = "Search for an Item"
+		Amongus.Text = ""
+		Amongus.TextColor3 = Color3.fromRGB(255, 255, 255)
+		Amongus.TextSize = 18.000
+
+		_90.Name = " Н г      Ь  ݅   9    0ѝ Н  ڜ              "
+		_90.Parent = Amongus
+
+		Frame.Parent = a
+		Frame.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+		Frame.BackgroundTransparency = 1.000
+		Frame.Size = UDim2.new(1, 0, 1, 0)
+
+		UIListLayout.Parent = Frame
+		UIListLayout.SortOrder = Enum.SortOrder.LayoutOrder
+
+		Frame_2.Parent = Frame
+		Frame_2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+		Frame_2.BackgroundTransparency = 1.000
+		Frame_2.Size = UDim2.new(1, 0, 0, 7)
+
+		TextButton.Parent = Frame
+		TextButton.BackgroundColor3 = Color3.fromRGB(14, 14, 14)
+		TextButton.Size = UDim2.new(1, 0, 0, 40)
+		TextButton.Visible = false
+		TextButton.Font = Enum.Font.SourceSans
+		TextButton.Text = "Option"
+		TextButton.TextColor3 = Color3.fromRGB(255, 255, 255)
+		TextButton.TextSize = 17.000
+
+		_1.Name = "?Нݔ  НڹІ ڝ   1       ݿ                  "
+		_1.Parent = TextButton
+
+		UIListLayout_2.Parent = a
+		UIListLayout_2.SortOrder = Enum.SortOrder.LayoutOrder
+
+		-- Scripts:
+
+		local function YXVRPG_fake_script() -- a.LocalScript
+			local script = Instance.new('LocalScript', a)
+
+			local UserInputService = game:GetService("UserInputService")
+
+			local gui = Scrolling
+
+			local dragging
+			local dragInput
+			local dragStart
+			local startPos
+
+			local function update(input)
+				local delta = input.Position - dragStart
+				gui.Position = UDim2.new(startPos.X.Scale, startPos.X.Offset + delta.X, startPos.Y.Scale, startPos.Y.Offset + delta.Y)
+			end
+
+			gui.InputBegan:Connect(function(input)
+				if input.UserInputType == Enum.UserInputType.MouseButton1 or input.UserInputType == Enum.UserInputType.Touch then
+					dragging = true
+					dragStart = input.Position
+					startPos = gui.Position
+
+					input.Changed:Connect(function()
+						if input.UserInputState == Enum.UserInputState.End then
+							dragging = false
+						end
+					end)
+				end
+			end)
+
+			gui.InputChanged:Connect(function(input)
+				if input.UserInputType == Enum.UserInputType.MouseMovement or input.UserInputType == Enum.UserInputType.Touch then
+					dragInput = input
+				end
+			end)
+
+			UserInputService.InputChanged:Connect(function(input)
+				if input == dragInput and dragging then
+					update(input)
+				end
+			end)
+
+
+			game.Workspace.Map.Ignore.Tools.ChildRemoved:Connect(function(Model)
+				for i,v in pairs(script.Parent.Frame:GetChildren()) do
+					if v:IsA('TextButton') and  v.Text == Model.Name then
+						v:Destroy()
+					end
+				end
+			end)
+
+			game.Workspace.Map.Ignore.Tools.ChildAdded:Connect(function(Model)
+				local TextButton = script.Parent.Frame.TextButton
+				local CloneTextButton = TextButton:Clone()
+				CloneTextButton.Parent = script.Parent.Frame
+				CloneTextButton.Visible = true
+				CloneTextButton.Text = Model.Name
+				CloneTextButton.MouseButton1Click:Connect(function()
+					Connectionerere = game.RunService.RenderStepped:Connect(function()
+						if Model.Parent ~= nil and InfStorage == false   then
+							game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = Model.Handle.CFrame
+
+							local args = {
+								[1] = "",
+								[2] = Model.Name
+							}
+
+							workspace.Services.PickupTool:InvokeServer(unpack(args))
+						else
+							if Model.Parent ~= nil and InfStorage == true then
+								game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = Model.Handle.CFrame
+								local args = {
+									[1] = "",
+									[2] = Model.Name
+								}
+
+								workspace.Services.PickupTool:InvokeServer(unpack(args))
+
+							end
+						end
+					end)
+					wait(2)
+					Connectionerere:Disconnect()
+				end)
+			end)
+
+			for i,v in pairs(game.Workspace.Map.Ignore.Tools:GetChildren()) do
+				local TextButton = script.Parent.Frame.TextButton
+				local CloneTextButton = TextButton:Clone()
+				CloneTextButton.Parent = script.Parent.Frame
+				CloneTextButton.Visible = true
+				CloneTextButton.Text = v.Name
+				CloneTextButton.MouseButton1Click:Connect(function()
+					Connectionerere = game.RunService.RenderStepped:Connect(function()
+						if v.Parent ~= nil and InfStorage == false   then
+							game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = v.Handle.CFrame
+
+							local args = {
+								[1] = "",
+								[2] = v.Name
+							}
+
+							workspace.Services.PickupTool:InvokeServer(unpack(args))
+						else
+							if v.Parent ~= nil and InfStorage == true then
+								game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = v.Handle.CFrame
+								local args = {
+									[1] = "",
+									[2] = v.Name
+								}
+
+								workspace.Services.PickupTool:InvokeServer(unpack(args))
+
+							end
+						end
+					end)
+					wait(2)
+					Connectionerere:Disconnect()
+				end)
+			end
+
+			local scroll = script.Parent.Parent.Parent.Scrolling
+			local textBox = script.Parent.Amongus
+
+			textBox.Changed:Connect(function()
+				local text = textBox.Text:lower()
+				if text ~= "" then
+					local buttons = scroll:GetDescendants()
+					for _, button in pairs(buttons) do
+						if button:IsA("TextButton") then
+							local buttonText = button.Text:lower()
+							if string.find(buttonText, text) then
+								button.Visible = true
+							else
+								button.Visible = false
+							end
+						end
+					end
+				else
+					local buttons = scroll:GetDescendants()
+					for _, button in pairs(buttons) do
+						if button:IsA("TextButton") then
+							button.Visible = true
+						end
+					end
+				end
+			end)
+		end
+
+		coroutine.wrap(YXVRPG_fake_script)()
+	end
+})
+
+local itemEsp = miscTab:Button({
+	name = "Item Esp",
+
+	callback = function()
+		if game.Players.LocalPlayer.Character:FindFirstChild("WisdomArtifact") == nil  then    
+			local BoolValue = Instance.new("BoolValue")
+			BoolValue.Value = true
+			BoolValue.Name = "WisdomArtifact"
+			BoolValue.Parent = game.Players.LocalPlayer.Character
+
+		end
+
+		game.Workspace.Threats.ChildAdded:Connect(function()
+			if game.Players.LocalPlayer.Character:FindFirstChild("WisdomArtifact") then
+				local BoolValue = Instance.new("BoolValue")
+				BoolValue.Value = true
+				BoolValue.Name = "WisdomArtifact"
+				BoolValue.Parent = game.Players.LocalPlayer.Character
+			end
+		end)
+
+		game.Players.LocalPlayer.CharacterAdded:Connect(function(character)
+			task.wait(1)
+			if game.Players.LocalPlayer.Character:FindFirstChild("WisdomArtifact") == nil  then
+				local BoolValue = Instance.new("BoolValue")
+				BoolValue.Value = true
+				BoolValue.Name = "WisdomArtifact"
+				BoolValue.Parent = game.Players.LocalPlayer.Character
+			end
+		end)
 	end
 })
 
@@ -596,14 +851,9 @@ for i,e in pairs(plrs) do
 		name = e.Name,
 
 		callback = function() 
-			if e.Character and ANTITPBYPASS == true  then
-				game.Players.LocalPlayer.Character.Humanoid.Health = 0
-				game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = e.Character.HumanoidRootPart.CFrame
-			else
-				if e.Character and ANTITPBYPASS == false then
-					game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = e.Character.HumanoidRootPart.CFrame
-				end
-			end
+			game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(291.284088, 20.2382774, 31310.9336, 0, 0, 1, 0, 1, -0, -1, 0, 0)
+			wait(2)
+			game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = workspace[e.Name].HumanoidRootPart.CFrame
 		end
 	})
 end
